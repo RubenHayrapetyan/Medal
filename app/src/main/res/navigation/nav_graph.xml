@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/gamesMenuFragmentNavigation">
+
+    <fragment
+        android:id="@+id/gamesMenuFragmentNavigation"
+        android:name="com.sub_zet.medal.fragments.menu.games.games_menu.GamesMenuFragment"
+        android:label="fragment_games_menu"
+        tools:layout="@layout/fragment_games_menu">
+        <action
+            android:id="@+id/action_gamesMenuFragment_to_selectedGameFragment"
+            app:destination="@id/selectedGameFragmentNavigation"
+            app:enterAnim="@anim/nav_default_pop_enter_anim"
+            app:popUpTo="@+id/gamesMenuFragmentNavigation" />
+    </fragment>
+    <fragment
+        android:id="@+id/selectedGameFragmentNavigation"
+        android:name="com.sub_zet.medal.fragments.menu.games.selected_game.SelectedGameFragment"
+        android:label="fragment_selected_game"
+        tools:layout="@layout/fragment_selected_game">
+        <action
+            android:id="@+id/action_selectedGameFragmentNavigation_to_gamesMenuFragmentNavigation4"
+            app:destination="@id/gamesMenuFragmentNavigation"
+            app:popUpTo="@+id/helpMenuFragmentNavigation" />
+    </fragment>
+    <fragment
+        android:id="@+id/profileMenuFragmentNavigation"
+        android:name="com.sub_zet.medal.fragments.menu.profile.ProfileFragment"
+        android:label="fragment_profile_menu"
+        tools:layout="@layout/fragment_profile" />
+    <fragment
+        android:id="@+id/paymentsMenuFragmentNavigation"
+        android:name="com.sub_zet.medal.fragments.menu.payments.PaymentsMenuFragment"
+        android:label="fragment_payments_menu"
+        tools:layout="@layout/fragment_payments_menu" />
+    <fragment
+        android:id="@+id/helpMenuFragmentNavigation"
+        android:name="com.sub_zet.medal.fragments.menu.help.HelpMenuFragment"
+        android:label="fragment_games_menu"
+        tools:layout="@layout/fragment_games_menu" />
+
+</navigation>

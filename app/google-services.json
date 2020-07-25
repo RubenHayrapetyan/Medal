@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "603234562381",
+    "firebase_url": "https://medal-9c584.firebaseio.com",
+    "project_id": "medal-9c584",
+    "storage_bucket": "medal-9c584.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:603234562381:android:38c0602a18498468ee0704",
+        "android_client_info": {
+          "package_name": "com.sub_zet.medal"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "603234562381-nuh1ffjg0k160vcoojf2vv72bfqs28ci.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.sub_zet.medal",
+            "certificate_hash": "4f3c98597eb3c20ad1a92c7c190e13f6542eb3e9"
+          }
+        },
+        {
+          "client_id": "603234562381-5h12q39s68q2dla6l502gm2dbspg4e0c.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAkRa90Av6lTgdtD0TFpmmsmIsSKreWATA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "603234562381-5h12q39s68q2dla6l502gm2dbspg4e0c.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

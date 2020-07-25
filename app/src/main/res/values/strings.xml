@@ -1,0 +1,84 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <string name="app_name">Medal</string>
+
+    <string name="facebook_app_id">1222621457936705</string>
+    <string name="fb_login_protocol_scheme">fb1222621457936705</string>
+
+    <!--YouTubeActivity-->
+    <string name="skip">Пропустить</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <string name="choose_platform">Выберите Платформу</string>
+    <string name="choose_game">Выберите Игру</string>
+
+    <!--SelectedGameFragment-->
+    <string name="choose_price">Выберите сумму</string>
+    <string name="enter_your_game_nickname">Введите свой игровой ник</string>
+    <string name="search">Поиск</string>
+    <string name="nickname_cannot_be_empty_text">Ник не может быть пустым</string>
+
+    <string name="vs_text">VS</string>
+    <string name="name">"Имя: "</string>
+    <string name="balance">"Баланс: "</string>
+    <string name="user_id">"Иднт. польз: "</string>
+    <string name="win">Победа</string>
+    <string name="draw">Ничья</string>
+    <string name="lose">Порож.</string>
+    <string name="complaint">Жалоба</string>
+    <string name="deny">Отмена</string>
+    <string name="accept">Согласиться</string>
+
+    <string name="price_changed_dialog">"Мы не находим пользователя с выбранной ценой, вы бы хотели поиграть с"</string>
+    <string name="wait_for_administrator_decision">"Спасибо, дождитесь решения администратора. Это будет в течение 12 часов"</string>
+    <string name="yes">Да</string>
+    <string name="no">Нет</string>
+
+    <string name="rubli">ք</string>
+    <string name="try_again">Попробуйте еще раз!</string>
+    <string name="go_to_menu">Перейти в меню</string>
+    <string name="no_internet_connection">Подключение к Интернету отсутствует</string>
+    <string name="sign_in">Войти</string>
+    <string name="password">Пароль</string>
+    <string name="email">Эл. почта</string>
+    <string name="confirm">Подтвердить</string>
+    <string name="register">Регистрация</string>
+    <string name="name_and_last_name">Имя и Фамилия</string>
+    <string name="medal">Medal</string>
+    <string name="your_account_is_blocked">Ваш аккаунт заблокирован</string>
+    <string name="your_balance">Ваш баланс</string>
+    <string name="cash_in">Пополнить</string>
+    <string name="cash_out">Обналичить</string>
+    <string name="game_ended">Игра завершена</string>
+    <string name="upload_game_result">Загрузите результат игры</string>
+    <string name="ready">Готов</string>
+    <string name="games_rating">Игровой рейтинг</string>
+    <string name="login_with_google">Войти через Google</string>
+    <string name="opponent_left">Оппонент вышел</string>
+
+    <!--Toast-->
+    <string name="not_enough_cash">Нет достаточно наличных</string>
+    <string name="there_is_no_user_yet">Пока нет противника</string>
+    <string name="server_error">Ошибка сервера, попробуй ещё.</string>
+    <string name="please_try_with_another_acc">Ошибка, попробуйте с другой учетной записью</string>
+    <string name="input_is_empty">Input is empty</string>
+    <string name="please_try_again">Пожалуйста, попробуйте еще раз</string>
+    <string name="something_went_wrong">Пожалуйста, попробуйте еще раз</string>
+    <string name="your_transfer_will_be">Ваш перевод будет в течение 12 часов</string>
+    <string name="your_vallet_number">Ваш номер кошелька</string>
+    <string name="amount">Сумма</string>
+    <string name="complaint_text">Если есть какие-либо жалобы, пожалуйста, сообщите нам об этом</string>
+    <string name="chosen_amount">Выбранная сумма должна быть более 103ք</string>
+    <string name="send">Отправить</string>
+    <string name="timer" tools:ignore="MissingTranslation">10:00</string>
+    <string name="thanks">Спасибо!</string>
+    <string name="wait">Ждите соперника…</string>
+    <string name="not_enough_cash_for_playing">У вас недостаточно средств, чтобы поиграть с данным пользователем, его ставка </string>
+    <string name="game_does_not_start">Игра не состаялась</string>
+    <string name="game_not_started_dialog">Мы осмотрим ваш опрос</string>
+    <string name="select_game_state">Выберите состояние игры</string>
+    <string name="sum">" сумма "</string>
+    <string name="wait_opponent_to_change_price">Подождите, пока соперник не изменит ставку</string>
+
+</resources>

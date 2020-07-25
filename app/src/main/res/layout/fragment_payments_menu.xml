@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".fragments.menu.payments.PaymentsMenuFragment">
+
+    <data>
+        <variable
+            name="model"
+            type="com.sub_zet.medal.models.PaymentModel" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:background="@drawable/main_bg"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ProgressBar
+            android:id="@+id/loading_pb"
+            android:visibility="visible"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="@+id/user_balance_txt"
+            app:layout_constraintTop_toTopOf="@+id/user_balance_txt"
+            app:layout_constraintEnd_toEndOf="@+id/user_balance_txt"
+            app:layout_constraintBottom_toBottomOf="@+id/user_balance_txt"
+            />
+
+        <TextView
+            android:id="@+id/balance_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_marginTop="@dimen/size_10dp"
+            android:text="@string/your_balance"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_20sp"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/user_balance_txt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:gravity="center"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_22sp"
+            android:text="@{model.balance + `ք`}"
+            tools:text="15"
+            app:layout_constraintTop_toBottomOf="@+id/balance_text"
+            />
+
+        <Button
+            android:id="@+id/cash_in_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/btn_shape1"
+            android:text="@string/cash_in"
+            android:textColor="@color/black"
+            android:textSize="@dimen/text_14sp"
+            android:layout_marginBottom="@dimen/size_20dp"
+            app:layout_constraintBottom_toBottomOf="@id/vertical_guidline"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/vertical_guidline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.5"/>
+
+        <Button
+            android:id="@+id/cash_out_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/cash_out"
+            android:textColor="@color/black"
+            android:textSize="@dimen/text_14sp"
+            android:layout_marginTop="@dimen/size_20dp"
+            android:background="@drawable/btn_shape1"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/vertical_guidline" />
+
+        <WebView
+            android:id="@+id/yandex_money_webview"
+            android:visibility="gone"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+
+        <ProgressBar
+            android:id="@+id/loading_popolnit_pb"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            app:layout_constraintTop_toTopOf="@id/cash_in_btn"
+            app:layout_constraintBottom_toBottomOf="@+id/cash_in_btn"
+            app:layout_constraintEnd_toEndOf="@+id/cash_in_btn"
+            app:layout_constraintStart_toStartOf="@+id/cash_in_btn" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

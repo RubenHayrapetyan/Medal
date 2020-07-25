@@ -1,0 +1,82 @@
+<resources>
+    <string name="app_name">Medal</string>
+
+    <string name="facebook_app_id">1222621457936705</string>
+    <string name="fb_login_protocol_scheme">fb1222621457936705</string>
+
+    <!--YouTubeActivity-->
+    <string name="skip">Skip</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <string name="choose_platform">Choose platform</string>
+    <string name="choose_game">Choose Game</string>
+
+    <!--SelectedGameFragment-->
+    <string name="choose_price">Choose price</string>
+    <string name="enter_your_game_nickname">Enter your game nickname</string>
+    <string name="search">Search</string>
+    <string name="nickname_cannot_be_empty_text">"Nickname can't be empty"</string>
+
+    <string name="vs_text">VS</string>
+    <string name="name">"Name: "</string>
+    <string name="balance">"Balance: "</string>
+    <string name="user_id">"User id: "</string>
+    <string name="win">"Win "</string>
+    <string name="draw">Draw</string>
+    <string name="lose">Lose</string>
+    <string name="complaint">Complaint</string>
+    <string name="deny">Deny</string>
+    <string name="accept">Accept</string>
+
+    <string name="price_changed_dialog">"We don't find user with chosen price, would you like to play with"</string>
+    <string name="wait_for_administrator_decision">"Thanks, wait for the administrator decision. It will be within 12 hours"</string>
+    <string name="yes">Yes</string>
+    <string name="no">No</string>
+
+    <string name="rubli">ք</string>
+    <string name="try_again">Try again!</string>
+    <string name="go_to_menu">Go to menu</string>
+    <string name="no_internet_connection">No internet connection</string>
+    <string name="sign_in">Sign in</string>
+    <string name="password">Password</string>
+    <string name="email">Email</string>
+    <string name="confirm">Confirm</string>
+    <string name="register">Register</string>
+    <string name="name_and_last_name">Name and Last Name</string>
+    <string name="medal">Medal</string>
+    <string name="your_account_is_blocked">Your account is blocked</string>
+    <string name="your_balance">Your balance</string>
+    <string name="cash_in">Cash in</string>
+    <string name="cash_out">Cash out</string>
+    <string name="game_ended">Game ended</string>
+    <string name="upload_game_result">Upload game result</string>
+    <string name="ready">Ready</string>
+    <string name="games_rating">Games rating</string>
+    <string name="login_with_google">Login with Google</string>
+    <string name="opponent_left">Opponent left</string>
+
+    <!--Toast-->
+    <string name="not_enough_cash">Not enough cash</string>
+    <string name="there_is_no_user_yet">There is no user yet</string>
+    <string name="server_error">Server error, try again.</string>
+    <string name="please_try_with_another_acc">Error, please try with another account</string>
+    <string name="input_is_empty">Input is empty</string>
+    <string name="please_try_again">Please, try again</string>
+    <string name="something_went_wrong">Please, try again</string>
+    <string name="your_transfer_will_be">Your transfer will be within 12 hours</string>
+    <string name="your_vallet_number">Your vallet number</string>
+    <string name="amount">Amount</string>
+    <string name="complaint_text">If there is any complaint, please tell us about it</string>
+    <string name="chosen_amount">Chosen amount must be more than 103ք </string>
+    <string name="send">Send</string>
+    <string name="thanks">Thanks!</string>
+    <string name="wait">Wait for opponent…</string>
+    <string name="not_enough_cash_for_playing">"You don't have enough cash to play with current user, because his bet price is"</string>
+    <string name="game_does_not_start">Game does not start</string>
+    <string name="game_not_started_dialog">We will examine your request</string>
+    <string name="select_game_state">Select game state</string>
+    <string name="sum">" price "</string>
+    <string name="wait_opponent_to_change_price">Please, wait, until opponent will change his price</string>
+</resources>

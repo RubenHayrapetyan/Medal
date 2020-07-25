@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".fragments.menu.games.selected_game.SelectedGameFragment">
+
+    <data>
+
+        <import type="android.view.View" />
+
+        <variable
+            name="viewModel"
+            type="com.sub_zet.medal.fragments.menu.games.selected_game.SelectedGameViewModel" />
+        <variable
+            name="user_nickname"
+            type="String" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/main_bg">
+
+        <ProgressBar
+            android:id="@+id/loading_pb"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/search_form_constraint"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="visible">
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guid_line"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintGuide_percent="0.45" />
+
+            <ImageView
+                android:id="@+id/game_cover_img"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:load_image="@{viewModel.gamesModelLiveData.data.selectedGameImgURL}"
+                android:visibility="visible"
+                app:layout_constraintBottom_toBottomOf="@id/guid_line"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <!--            android:visibility="@{viewModel.showVideo? View.VISIBLE : View.GONE}"-->
+            <WebView
+                android:id="@+id/selected_game_tutorial_webview"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:my_webview="@{viewModel.gamesModelLiveData.data.selectedGameVideoUrl}"
+                app:layout_constraintBottom_toBottomOf="@id/guid_line"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/selected_game_description_txt"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:fadeScrollbars="false"
+                android:maxLines="3"
+                android:scrollbars="vertical"
+                android:text="@{viewModel.gamesModelLiveData.data.selectedGameDescription}"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_15sp"
+                app:layout_constraintEnd_toEndOf="@id/bet_price_btn"
+                app:layout_constraintStart_toStartOf="@id/bet_price_btn"
+                app:layout_constraintTop_toBottomOf="@id/guid_line" />
+
+            <TextView
+                android:id="@+id/choose_price_text_txt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/size_10dp"
+                android:gravity="center"
+                android:text="@string/choose_price"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_20sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/selected_game_description_txt" />
+
+            <TextView
+                android:id="@+id/bet_price_btn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/size_10dp"
+                android:background="@drawable/shape_of_btn"
+                android:gravity="center"
+                android:padding="4dp"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_16sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/choose_price_text_txt" />
+
+            <ImageView
+                android:id="@+id/toggle_arrow_img"
+                android:layout_width="@dimen/size_18dp"
+                android:layout_height="@dimen/size_18dp"
+                android:layout_marginEnd="@dimen/size_10dp"
+                android:src="@drawable/toggle_arrow_closed_icon"
+                app:layout_constraintBottom_toBottomOf="@id/bet_price_btn"
+                app:layout_constraintEnd_toEndOf="@id/bet_price_btn"
+                app:layout_constraintTop_toTopOf="@id/bet_price_btn" />
+
+            <LinearLayout
+                android:id="@+id/bet_price_linear"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:orientation="vertical"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="@id/bet_price_btn"
+                app:layout_constraintStart_toStartOf="@id/bet_price_btn"
+                app:layout_constraintTop_toBottomOf="@id/bet_price_btn">
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/bet_price_recycler"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/border_for_layout"
+                    android:selected_game_bet_price="@{viewModel.gamesModelLiveData.data.selectedGameBetPriceArray}"
+                    android:visibility="gone" />
+
+                <EditText
+                    android:id="@+id/user_nickname_edt"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/size_20dp"
+                    android:alpha="0.8"
+                    android:backgroundTint="@color/white"
+                    android:focusableInTouchMode="true"
+                    android:text="@{user_nickname}"
+                    android:textColor="@color/white"
+                    android:textColorHint="@color/white"
+                    android:textSize="@dimen/text_16sp" />
+
+                <TextView
+                    android:id="@+id/search_btn"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/size_20dp"
+                    android:background="@drawable/shape_of_btn"
+                    android:enabled="false"
+                    android:gravity="center"
+                    android:padding="@dimen/size_10dp"
+                    android:text="@string/search"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/text_16sp" />
+            </LinearLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

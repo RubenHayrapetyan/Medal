@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="#161632"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activities.MenuActivity"
+    >
+
+    <FrameLayout
+        android:id="@+id/menu_main_container"
+        android:layout_above="@id/bottom_navigation"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <fragment
+            android:id="@+id/gamesMenuFragment"
+            android:name="androidx.navigation.fragment.NavHostFragment"
+            tools:layout="@layout/fragment_games_menu"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:navGraph="@navigation/nav_graph"
+            />
+    </FrameLayout>
+
+    <com.etebarian.meowbottomnavigation.MeowBottomNavigation
+        android:id="@+id/bottom_navigation"
+        android:layout_alignParentBottom="true"
+        app:mbn_backgroundBottomColor="#4B172D"
+        app:mbn_countBackgroundColor="#FE9055"
+        app:mbn_countTextColor="#000"
+        app:mbn_defaultIconColor="@color/orange"
+        app:mbn_rippleColor="#E6FF00"
+        app:mbn_selectedIconColor="#F34650"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+    <!--        app:mbn_countTypeface=""-->
+
+</RelativeLayout>

@@ -1,0 +1,126 @@
+apply plugin: 'com.android.application'
+apply plugin: 'com.google.gms.google-services'
+
+android {
+    compileSdkVersion 29
+    defaultConfig {
+        applicationId "com.sub_zet.medal"
+        minSdkVersion 24
+        targetSdkVersion 29
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility = 1.8
+        targetCompatibility = 1.8
+    }
+    dataBinding {
+        enabled = true
+    }
+}
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation 'androidx.appcompat:appcompat:1.1.0'
+    implementation 'androidx.constraintlayout:constraintlayout:1.1.3'
+
+    // Glide
+    implementation 'com.github.bumptech.glide:glide:4.11.0'
+
+    // Design
+    implementation 'com.google.android.material:material:1.0.0'
+
+    // firebase
+    implementation 'com.google.firebase:firebase-analytics:17.2.1'
+    implementation 'com.google.firebase:firebase-auth:19.2.0'
+
+    // Bus event
+    implementation 'org.greenrobot:eventbus:3.1.1'
+
+    // Network library Volley
+    implementation 'com.mcxiaoke.volley:library-aar:1.0.0'
+
+    // Multidex library
+    implementation 'com.android.support:multidex:1.0.3'
+
+    // Rounded ImageView
+    implementation 'de.hdodenhof:circleimageview:3.0.1'
+
+    // Navigation Menu
+    implementation 'com.etebarian:meow-bottom-navigation:1.0.4'
+
+    // FCM
+    implementation 'com.google.android.gms:play-services-auth:17.0.0'
+
+    def nav_version = "2.1.0"
+    // Navigation
+    implementation "androidx.navigation:navigation-fragment-ktx:$nav_version"
+    implementation "androidx.navigation:navigation-ui-ktx:$nav_version"
+
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
+    implementation 'com.google.firebase:firebase-messaging:20.1.0'
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.1'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
+    implementation files('libs\\YouTubeAndroidPlayerApi.jar')
+
+    // Gson
+    implementation 'com.google.code.gson:gson:2.8.6'
+
+    //For testing UI
+    androidTestImplementation 'com.android.support.test:rules:1.0.2'
+    androidTestImplementation("com.android.support.test.espresso:espresso-contrib:2.2.2") {
+        exclude group: 'com.android.support', module: 'appcompat'
+        exclude group: 'com.android.support', module: 'support-v4'
+        exclude group: 'com.android.support', module: 'support-v7'
+        exclude group: 'com.android.support', module: 'design'
+        exclude module: 'support-annotations'
+        exclude module: 'recyclerview-v7'
+    }
+
+    // Retrofit
+    implementation 'com.squareup.retrofit2:retrofit:2.5.0'
+    implementation 'com.squareup.retrofit2:converter-gson:2.5.0'
+
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk8:$kotlin_version"
+    implementation "org.jetbrains.kotlin:kotlin-reflect:$kotlin_version"
+
+    // Socket.io
+    implementation 'com.github.nkzawa:socket.io-client:0.6.0'
+
+    implementation('io.socket:socket.io-client:1.0.0') {
+        // excluding org.json which is provided by Android
+        exclude group: 'org.json', module: 'json'
+    }
+
+    // LiveData
+    implementation 'androidx.lifecycle:lifecycle-extensions:2.1.0'
+
+    // Koin di library
+    // Koin AndroidX Scope feature
+    def koin_version = "2.0.1"
+    implementation "org.koin:koin-androidx-scope:$koin_version"
+    // Koin AndroidX ViewModel feature
+    implementation "org.koin:koin-androidx-viewmodel:$koin_version"
+    // Koin AndroidX Experimental features
+    implementation "org.koin:koin-androidx-ext:$koin_version"
+    implementation "org.koin:koin-java:$koin_version"
+
+    implementation "androidx.room:room-runtime:2.2.3"
+    annotationProcessor "androidx.room:room-compiler:2.2.3"
+    implementation 'com.github.jkwiecien:EasyImage:3.0.3'
+}
+apply plugin: 'com.google.gms.google-services'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-android-extensions'

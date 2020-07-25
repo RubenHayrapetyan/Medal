@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <import type="android.view.View" />
+
+        <variable
+            name="platform_model"
+            type="com.sub_zet.medal.models.PlatformsModel" />
+    </data>
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/size_12dp"
+        android:layout_marginEnd="@dimen/size_12dp">
+
+        <FrameLayout
+            android:id="@+id/selected_platform"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignStart="@id/platform_relative"
+            android:layout_alignTop="@id/platform_relative"
+            android:layout_alignEnd="@id/platform_relative"
+            android:layout_alignBottom="@id/platform_relative"
+            android:background="@drawable/border_for_layout"
+            android:visibility="@{platform_model.selected ? View.VISIBLE : View.GONE}" />
+
+        <RelativeLayout
+            android:id="@+id/platform_relative"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/platform_icon_img"
+                android:layout_width="@dimen/games_and_platforms_size"
+                android:layout_height="@dimen/games_and_platforms_size"
+                android:layout_centerInParent="true"
+                android:layout_margin="@dimen/size_10dp"
+                android:load_image="@{platform_model.platformIconUrl}"
+                android:scaleType="centerInside" />
+
+            <TextView
+                android:id="@+id/platform_name_txt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/platform_icon_img"
+                android:fontFamily="@font/morris_roman_black"
+                android:gravity="center"
+                android:text="@{platform_model.platformName}"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_18sp"
+                android:textStyle="bold"
+                tools:text="Android" />
+        </RelativeLayout>
+    </RelativeLayout>
+</layout>

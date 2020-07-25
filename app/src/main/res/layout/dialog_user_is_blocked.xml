@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical">
+
+    <ImageView
+        android:src="@drawable/account_blocked_icon"
+        android:layout_width="150dp"
+        android:layout_height="150dp"/>
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/size_20dp"/>
+
+    <TextView
+        android:text="@string/your_account_is_blocked"
+        android:textSize="@dimen/text_24sp"
+        android:textStyle="bold"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+</LinearLayout>

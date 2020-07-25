@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+        <variable
+            name="bet_price"
+            type="com.sub_zet.medal.models.BetPriceModel" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:background="@drawable/border_for_layout"
+        android:layout_margin="6dp"
+        android:orientation="vertical"
+        android:focusable="true"
+        >
+
+        <TextView
+            android:id="@+id/bet_price_id_txt"
+            android:text="@{bet_price.id}"
+            android:textSize="@dimen/text_16sp"
+            android:visibility="gone"
+            android:textColor="@color/white"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+    <TextView
+        android:id="@+id/bet_price_txt"
+        android:text="@{bet_price.price}"
+        android:textSize="@dimen/text_16sp"
+        android:textColor="@color/white"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+    </LinearLayout>
+</layout>

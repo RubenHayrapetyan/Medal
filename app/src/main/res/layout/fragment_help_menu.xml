@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".fragments.menu.help.HelpMenuFragment">
+
+    <data>
+        <import type="java.util.ArrayList"/>
+        <variable
+            name="values"
+            type="ArrayList&lt;com.sub_zet.medal.models.HelpModel&gt;"/>
+    </data>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/games_tutorial_recycler"
+        android:scrollbars="vertical"
+        android:fadeScrollbars="false"
+        android:get_help_data="@{values}"
+        android:scrollbarSize="5dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+</layout>

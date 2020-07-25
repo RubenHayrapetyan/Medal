@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+        <import type="android.view.View"/>
+        <variable
+            name="games_row"
+            type="com.sub_zet.medal.models.GamesModel" />
+    </data>
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="8dp">
+
+<!--        <FrameLayout-->
+<!--            android:id="@+id/selected_game"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_alignStart="@id/games_relative"-->
+<!--            android:layout_alignTop="@id/games_relative"-->
+<!--            android:layout_alignEnd="@id/games_relative"-->
+<!--            android:layout_alignBottom="@id/games_relative"-->
+<!--            android:background="@drawable/border_for_layout"-->
+<!--            android:visibility="@{games_row.selected ? View.VISIBLE : View.GONE}" />-->
+
+        <RelativeLayout
+            android:id="@+id/games_relative"
+            android:padding="4dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/game_id"
+                android:text="@{games_row.gameId}"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:visibility="gone" />
+
+            <ImageView
+                android:id="@+id/game_img"
+                android:load_image="@{games_row.gameIconImg}"
+                android:layout_width="@dimen/games_and_platforms_size"
+                android:layout_height="@dimen/games_and_platforms_size"
+                android:layout_centerInParent="true"
+                android:scaleType="centerInside"
+                />
+        </RelativeLayout>
+    </RelativeLayout>
+</layout>
